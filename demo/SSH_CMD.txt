@@ -1,0 +1,10 @@
+# build lib
+cd /mnt/hgfs/shared/5160LibRestructure;ls
+cd /mnt/hgfs/shared/5160LibRestructure;make clean
+cd /mnt/hgfs/shared/5160LibRestructure;make
+# copy lib to test dir
+cp -f /mnt/hgfs/shared/5160LibRestructure/bin/libcom.a /mnt/hgfs/shared/5160LibUse/
+# make test program
+cd /mnt/hgfs/shared/5160LibUse;make -f Makefile_Light
+# run test
+cd /mnt/hgfs/shared/5160LibUse;./Run5160LibTest

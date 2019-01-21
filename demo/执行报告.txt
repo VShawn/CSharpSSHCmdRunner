@@ -1,0 +1,23 @@
+[send]# build lib:
+[receive]
+[send]cd /mnt/hgfs/shared/5160LibRestructure;ls:
+[receive]bin
+include
+Makefile
+objects
+sources
+
+[send]cd /mnt/hgfs/shared/5160LibRestructure;make clean:
+[receive]CLEAN
+rm -rf bin/*.o
+rm -rf bin/*.a
+rm -rf bin/*.so
+rm -rf bin/*.lib
+rm -rf bin/*.exe
+rm -rf objects/*.o
+rm -rf objects/*.a
+rm -rf objects/*.so
+rm -rf objects/*.lib
+rm -rf objects/*.exe
+
+[send]cd /mnt/hgfs/shared/5160LibRestructure;make:
