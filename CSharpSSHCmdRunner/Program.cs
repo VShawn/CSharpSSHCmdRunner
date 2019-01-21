@@ -107,7 +107,7 @@ namespace CSharpSSHCmdRunner
                     if (cmds.Count > 0)
                     {
                         // 执行
-                        RunSshCommands("172.20.65.72", 18001, "shawn", "123456", cmds.ToArray());
+                        RunSshCommands(sshci.IpArrress, sshci.Port, sshci.UserName, sshci.Pwd, cmds.ToArray());
                         return;
                     }
                 }
