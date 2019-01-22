@@ -12,9 +12,10 @@ namespace CSharpSSHCmdRunner
     {
         private static readonly string _Version = "20190121";
         private static readonly string _LogTxt = "执行报告.txt";
+
         static void WriteLogLine(string line)
         {
-            using (var sw = new StreamWriter(_LogTxt, true))
+            using (var sw = new StreamWriter(LogTxt, true, System.Text.Encoding.Default))
             {
                 Console.WriteLine(line);
                 sw.WriteLine(line);
